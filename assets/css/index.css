@@ -1,0 +1,259 @@
+p,
+html {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+.header {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+}
+.banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #F2EFE9;
+    color: #252627;
+    z-index: 1050; /* Higher than the navbar */
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%); /* Hide by default */
+  }
+  .banner a {
+    text-decoration: underline;
+  }
+  .banner a:hover {
+    color: #0582CA;
+  }
+  .banner.show {
+    transform: translateY(0); /* Show when active */
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0; /* Will dynamically change with JavaScript */
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s, top 0.3s; /* Transition for smooth top adjustment */
+  }
+/* .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+} */
+
+.navbar-light #logo path {
+    fill: black;
+}
+
+.navbar-light {
+    color: black;
+}
+
+.navbar.transparent {
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    background-color: white;
+    color: black;
+}
+
+.blurred-bg {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+}
+
+.hero {
+    background: url('../images/apartment/exterior_home.svg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+.container-fluid {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.carousel {
+    position: relative; /* Ensures controls are positioned correctly */
+    z-index: 1; /* Keeps the carousel above other elements */
+}
+.carousel-indicators {
+    background-color: rgba(255, 255, 255, 0.3) ;
+    border-radius: 1.563rem; /* Make them circular */
+    border: 0;
+    max-width: 5.5rem;
+}
+.carousel-indicators li {
+    background-color: #252627; /* Change the background color */
+    border-radius: 1.563rem; /* Make them circular */
+    border: 0;
+    width: 0.4rem; /* Custom width */
+    height: 0.4rem; /* Custom height */
+    opacity: 0.3; /* Change opacity */
+    transition: opacity 0.3s ease; /* Add transition for hover effects */
+}
+.carousel-indicators li.active {
+    background-color: #252627; /* Change the background color */
+    border-radius: 1.563rem; /* Make them circular */
+    border: 0;
+    width: 1.563rem; /* Custom width */
+    height: 0.4rem; /* Custom height */
+    opacity: 0.7; /* Change opacity */
+    transition: opacity 0.3s ease; /* Add transition for hover effects */
+}
+.swiper-container {
+    width: 100%; /* Ensure it uses full width */
+    overflow: hidden; /* Prevent overflow */
+}
+.swiper-wrapper {
+    display: flex; /* Use flex to properly align cards */
+}
+.swiper-slide {
+    width: calc(100% - 20px); /* Adjust width for each slide */
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: #007bff; /* Adjust the color as needed */
+    z-index: 10; /* Ensure they are above other content */
+}
+
+.swiper-pagination {
+    bottom: 10px; /* Adjust as needed */
+    z-index: 10; /* Ensure visibility */
+}
+.btn-icon {
+    border: none;
+    cursor: pointer;
+}
+.btn-group {
+    padding: 8px;
+    background-color: #EEF6FB;
+    border: 1.5px solid #BCDBEF;
+    border-radius: 6px;
+}
+.btn-filter{
+    background-color: transparent;
+    color: #0A2A3D;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 0.5rem 0.625rem;
+    margin: 0px;
+}
+.active-btn {
+    background-color: #FFFFFF;
+    color: #0582CA;
+    border: 2px solid #BCDBEF;
+    border-radius: 6px;
+    padding: 0.5rem 0.625rem;
+    transition: color 0.3s ease;
+    transition: background 0.3s ease;
+}
+.btn-filter .svg-path {
+    stroke: #0A2A3D; /* Default color */
+    transition: stroke 0.3s ease;
+    stroke-width: 2;
+}
+
+.btn-filter.active .svg-path {
+    stroke: #0582CA; /* Color when active */
+    stroke-width: 2;
+}
+
+.card {
+    width: fit-content;
+}
+
+.unit-img {
+    max-width: 17.5rem;
+    max-height: 13.75rem;
+}
+
+.badge {
+    background-color: #D8FFE0;
+    color: #006B15;
+    border-radius: 10px;
+}
+
+.badge-dot {
+    width: .4rem;
+    height: .4rem;
+    background-color: #006B15;
+    border: 1px solid #66FC84;
+    border-radius: 100%;
+}
+
+.modal-calendar {
+    padding: 2rem;
+}
+
+.section-title {
+    color: #00A6FB;
+    margin-bottom: 3rem;
+}
+.section-subtext {
+    margin-bottom: 2rem;
+}
+.btn-filters {
+    margin-bottom: 4rem;
+}
+.accent {
+    color: #00A6FB;
+}
+
+a {
+    color: #000;
+}
+
+.hover-bold-underline:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #000;
+}
+
+.agent-card {
+    height: 30rem;
+    color: #fff;
+}
+
+.isBlurred {
+    background: rgba(104, 104, 104, 0.3);
+    /* Background blur / lg */
+    backdrop-filter: blur(12px);
+    /* Note: backdrop-filter has minimal browser support */
+}
+
+#jourdan {
+    background: url('../images/headshot_pic.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#melissa {
+    background: url('../images/headshot_pic2.jpg') no-repeat center center;
+    background-size: cover;
+}
